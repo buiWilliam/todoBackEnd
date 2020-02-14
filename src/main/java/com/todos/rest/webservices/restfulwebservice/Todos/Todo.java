@@ -2,8 +2,16 @@ package com.todos.rest.webservices.restfulwebservice.Todos;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Todo {
-	private int id;
+	@Id
+	@GeneratedValue
+	private Integer id;
+	
 	private String username;
 	private String description;
 	private Date dueDate;

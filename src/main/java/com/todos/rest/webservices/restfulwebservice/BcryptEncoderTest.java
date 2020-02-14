@@ -1,5 +1,14 @@
 package com.todos.rest.webservices.restfulwebservice;
 
-public class BcryptEncoderTest {
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+public class BcryptEncoderTest {
+	public static void main(String[] args) {
+		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+		
+		for(int i=1;i<=10;i++) {
+			String encodedString =encoder.encode("404password");
+			System.out.println(encodedString);
+		}
+	}
 }
